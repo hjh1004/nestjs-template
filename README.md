@@ -76,3 +76,6 @@ Swagger docs will be available at localhost:3000/docs
 - Helmet
 - CORS
 - Microservices
+
+## Reference repository
+https://github.com/kentloog/nestjs-sequelize-typescript
