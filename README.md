@@ -19,6 +19,26 @@ Starter kit project made with [Nest](https://github.com/nestjs/nest) and [nestjs
 $ npm install
 ```
 
+## Setup Database Mysql
+Run mysql container
+```bash
+docker-compose up
+```
+Connect MySQL console
+```bash
+docker exec -it <CONTAINER_ID>  mysql -uroot -p
+```
+Create account and set authorization
+```bash
+CREATE USER 'root'@'172.17.0.1' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'user'@'172.17.0.1' WITH GRANT OPTION;
+```
+Apply and exit
+```bash
+flush privileges;
+exit
+```
+
 ## Setting up the database for development and test
 
 MySQL database connection options are shown in the following table:
