@@ -19,14 +19,14 @@ export class User extends Model<User> {
   @PrimaryKey
   @AutoIncrement
   @Column(DataType.BIGINT)
-  id: number;
+    id: number;
 
   @Column(DataType.STRING({ length: 128 }))
-  name: string;
+    name: string;
 
   @Unique
   @AllowNull(false)
   @IsEmail
   @Column(DataType.STRING({ length: 255 }))
-  email: string;
+    email: string;
 }

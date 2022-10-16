@@ -21,17 +21,17 @@ export class AllExceptionsFilter implements ExceptionFilter {
     const msg =
       exception instanceof HttpException
         ? // tslint:disable-next-line: no-string-literal
-          exception.getResponse()['message']
+        exception.getResponse()['message']
           ? // tslint:disable-next-line: no-string-literal
-            exception.getResponse()['message']
+          exception.getResponse()['message']
           : exception.getResponse()
         : exception instanceof Error
-        ? exception.message
-        : null;
+          ? exception.message
+          : null;
     const errorMsg =
       exception instanceof HttpException
         ? // tslint:disable-next-line: no-string-literal
-          exception.getResponse()['error']
+        exception.getResponse()['error']
         : null;
 
     const result: any = {

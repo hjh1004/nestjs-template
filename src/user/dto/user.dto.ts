@@ -6,18 +6,18 @@ export class UserDto {
   @ApiProperty()
   @IsNotEmpty()
   @IsNumber()
-  id: number;
+    id: number;
 
   @ApiProperty({ required: false })
   @IsOptional()
   @IsNotEmpty()
   @IsString()
-  name?: string;
+    name?: string;
 
   @ApiProperty()
   @IsNotEmpty()
   @IsEmail()
-  email: string;
+    email: string;
 
   constructor(user: User) {
     this.id = user.id;
